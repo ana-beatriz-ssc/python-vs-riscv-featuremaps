@@ -13,25 +13,25 @@ As etapas de processamento foram:
 
 # Arquivos Principais
 ## extrai_Imagem.py (Código criado e fornecido pelos monitores da disciplina)
-- Lê a imagem 11.jpeg
+- Lê a imagem `11.jpeg`
 - Separa os canais R, G e B
 - Converte cada canal para buffer linear
-- Gera imagem_dados.asm com valores em .byte (16 por linha)
+- Gera imagem_dados.asm com valores em `.byte` (16 por linha)
 
 ## mapaDeCaracteristicas.py
 Contém funções principais para o processamento em Python:
 
-- convolucao_3x3
-- ativacaoLeakyRelu
-- avgPooling
-- salvarMapaASM
-- gerarMapaTuplas
-- salvarMapaTuplasASM
-- main
+- `convolucao_3x3`
+- `ativacaoLeakyRelu`
+- `avgPooling`
+- `salvarMapaASM`
+- `gerarMapaTuplas`
+- `salvarMapaTuplasASM`
+- `main`
 
 Gera dois arquivos:
-- mapa_caracteristicas_python_G11.asm – formato por canal
-- mapa_caracteristicas_tuplas.asm – formato por tupla RGB (facilita a leitura e depuração)
+- `mapa_caracteristicas_python_G11.asm` – formato por canal
+- `mapa_caracteristicas_tuplas.asm` – formato por tupla RGB (facilita a leitura e depuração)
 
 ## processamento.asm
 Implementação completa da convolução e pooling em Assembly RISC-V:
@@ -43,12 +43,12 @@ Etapas executadas:
 - Armazenamento final em MAPA_R, MAPA_G, MAPA_B
 - Impressão formatada dos mapas no console
 
-O arquivo usa os dados presentes em imagem_dados.asm.
+O arquivo usa os dados presentes em `imagem_dados.asm`.
 
 ## extrator_assembly.py
 Converte a saída textual do RARS em arquivos estruturados:
-- mapa_caracteristicas_assembly_G11.asm – formato por canal
-- mapa_caracteristicas_tuplas_assembly.asm – formato RGB por pixel
+- `mapa_caracteristicas_assembly_G11.asm` – formato por canal
+- `mapa_caracteristicas_tuplas_assembly.asm` – formato RGB por pixel
 
 ## comparador_de_arquivos.py
 Compara os mapas gerados em Python e Assembly:
